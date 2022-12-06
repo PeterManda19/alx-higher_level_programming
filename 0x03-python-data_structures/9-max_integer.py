@@ -3,6 +3,8 @@
 
 def max_integer(my_list=[]):
     
+    """Replace ina copy"""
+
     if len(my_list) == 0:
         return (None)
 
