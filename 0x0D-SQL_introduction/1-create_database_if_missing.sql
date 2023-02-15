@@ -1,2 +1,2 @@
---  The following MySQL command will create a database named "hbtn_0c_0"
-IF NOT EXISTS hbtn_0c_0, CREATE DATABASE hbtn_0c_0;
+-- A script that creates a database hbtn_0c_0 in MYSQL server
+CREATE DATABASE IF NOT EXISTS hbtn_0c_0;
