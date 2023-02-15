@@ -1,4 +1,2 @@
-/* SHOW DATABASES 
- * Code that retrieves all the database names from the server and displays them.
-*/ 
+--  a script that retrieves all the database names from the MySQL server and displays them.
 SHOW DATABASES;
