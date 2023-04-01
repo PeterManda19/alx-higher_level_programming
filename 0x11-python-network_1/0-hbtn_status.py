@@ -1,23 +1,11 @@
 #!/usr/bin/python3
+from urllib import request
 
-# Import the 'requests' library
-import requests
-
-# Define the URL to request
-url = "https://intranet.hbtn.io/status"
-
-# Send a GET request to the URL
-response = requests.get(url)
-
-# Check if the response status code is OK (200)
-if response.status_code == requests.codes.ok:
-    # Print the type and content of the response
-    print("Body response:")
-    print(f"\t- type: {type(response.content)}")
-    print(f"\t- content: {response.content}")
-    
-    # Print the utf-8 encoded content of the response
-    print(f"\t- utf8 content: {response.text}")
-else:
-    # Raise an exception if the server returns an error status code
-    response.raise_for_status()
+if __name__ == "__main__":
+    with request.urlopen('https://intranet.hbtn.io/status') as response:
+        body = response.read()
+        content = body.decode('utf-8')
+        print('Body response:')
+        print('\t- type:', type(body))
+        print('\t- content:', body)
+        print('\t- utf8 content:', content)
